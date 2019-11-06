@@ -23,8 +23,8 @@ export default class App extends React.Component {
 
         userRef.onSnapshot(snapshot => {
           this.setState({ currentUser: snapshot.id, ...snapshot.data() });
+          console.log(this.state);
         });
-        console.log(this.state);
       } else {
         this.setState({ currentUser: userAuth }, () => {
           console.log(this.state);
